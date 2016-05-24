@@ -3,6 +3,8 @@
 gradle/
 gradlew
 gradlew.bat
+.cache-main
+.cache-tests
 
 # output folders
 target/
