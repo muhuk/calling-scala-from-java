@@ -7,6 +7,9 @@ apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'scala'
 
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
 repositories {
     jcenter()
     mavenCentral()
@@ -23,4 +26,15 @@ buildDir = 'target'
 
 eclipse {
     project.natures 'org.eclipse.buildship.core.gradleprojectnature'
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/main/scala', 'src/main/java']
+        }
+        java {
+            srcDirs = []
+        }
+	}
 }
